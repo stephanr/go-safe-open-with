@@ -1,0 +1,35 @@
+logger:
+  todo: todo
+
+allowed:
+  - cmd: "cmd"
+    arguments:
+      - type: "string"
+        value: "/s/c"
+      - type: "list"
+        splitSpace: true
+        values: 
+          - "start"
+          - "start /WAIT"
+      - type: "url"
+        insertBefore:
+          - "chrome"
+        trimLeft:
+          - "chrome \""
+        trimRight:
+          - "\""
+  - cmd: "cmd"
+    arguments:
+      - type: "string"
+        value: "/s/c"
+      - type: "list"
+        values: 
+          - "start"
+          - "start /WAIT"
+      - type: "url"
+        insertBefore:
+          - "firefox"
+        trimLeft:
+          - "firefox \""
+        trimRight:
+          - "\""
